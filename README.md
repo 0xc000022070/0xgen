@@ -1,0 +1,16 @@
+# 0xgen
+
+Print memory addresses in the terminal.
+
+## Usage
+
+```bash
+$ 0xgen
+0xc00011a0a8
+
+$ 0xgen
+0xc000194058
+
+$ 0xgen
+0xc000012150
+```
