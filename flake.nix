@@ -20,7 +20,7 @@
     packages = forAllSystems (system: let
       pkgs = nixpkgsFor.${system};
     in {
-      "0xgen" = pkgs.buildGo123Module {
+      "0xgen" = pkgs.buildGoModule {
         pname = "0xgen";
         src = ./.;
         vendorHash = null;
