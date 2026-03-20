@@ -17,6 +17,12 @@
 
     nixpkgsFor = forAllSystems (system: import nixpkgs {inherit system;});
   in {
+    overlays.default = final: prev: {
+      "0xgen" = self.packages.${prev.system}."0xgen";
+    };
+
+    overlay = self.overlays.default;
+
     packages = forAllSystems (system: let
       pkgs = nixpkgsFor.${system};
     in {
